@@ -1,0 +1,1118 @@
+@charset 'UTF-8';
+/*-----------------------------------------------------------------------------------------------------
+    [Master Stylesheet]
+		by : mr-rayures.com
+    Version : 1.0
+
+    Projet : 
+    Website : 
+  
+-------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------
+    [variables]
+    
+    + Neat
+    + Breackpoint
+    + Typo
+-------------------------------------------------------------------------------------------------------*/
+/* Neat Overrides */
+/* Breackpoint */
+/* Typo */
+/*-----------------------------------------------------------------------------------------------------
+    [mixins]
+-------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------
+    [Reset]
+
+    http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0 | 20110126
+    License: none (public domain)    
+-------------------------------------------------------------------------------------------------------*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+    /*font: inherit;
+  vertical-align: baseline;*/
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+    /*list-style: none;*/
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+/* quick print reset */
+@media print {
+  p,
+    blockquote {
+    orphans: 2;
+    widows: 2;
+  }
+
+  blockquote,
+    ul,
+    ol {
+    page-break-inside: avoid;
+  }
+
+  h1,
+    h2,
+    h3,
+    caption {
+    page-break-after: avoid;
+  }
+
+  * {
+    color: black !important;
+    background: transparent !important;
+    text-shadow: none !important;
+    -webkit-filter: none !important;
+            filter: none !important;
+    -ms-filter: none !important;
+  }
+    /* Black prints faster: h5bp.com/s */
+  a,
+    a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: ' (' attr(href) ')';
+  }
+
+  abbr[title]:after {
+    content: ' (' attr(title) ')';
+  }
+
+  .ir a:after,
+    a[href^='javascript:']:after,
+    a[href^='#']:after {
+    content: '';
+  }
+    /* Don't show links for images, or javascript/internal links */
+    pre,
+    blockquote
+    {
+        border: 1px solid #999;
+
+        page-break-inside: avoid;
+    }
+    thead
+    {
+        display: table-header-group;
+    }
+    /* h5bp.com/t */
+    tr,
+    img
+    {
+        page-break-inside: avoid;
+    }
+    img
+    {
+        max-width: 100% !important;
+    }
+    @page
+    {
+        margin: .5cm;
+    }
+    p,
+    h2,
+    h3
+    {
+        orphans: 3;
+        widows: 3;
+    }
+    h2,
+    h3
+    {
+        page-break-after: avoid;
+    }
+}
+
+/* orientation iOS font-size fix */
+@media (orientation: landscape) and (max-device-width: 767px)
+{
+    html,
+    body
+    {
+        -webkit-text-size-adjust: 100%;
+    }
+}
+
+/*-----------------------------------------------------------------------------------------------------
+    [colors]
+-------------------------------------------------------------------------------------------------------*/
+/* Application colors */
+/* Typography colors */
+/* Shades of grey */
+/* Alerts colors */
+/* Social colors */
+/*-----------------------------------------------------------------------------------------------------
+    [typography]
+-------------------------------------------------------------------------------------------------------*/
+body
+{
+    font-family: Arial, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400; 
+    line-height: 140%;
+
+    color: #000;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400; 
+    line-height: 140%;
+
+    margin: 0;
+
+    color: #000;
+}
+
+h1,
+.h1-like
+{
+    font-size: 20px;
+}
+@media only screen and (max-width: 767px)
+{
+    h1,
+    .h1-like
+    {
+        font-size: 20px;
+    }
+}
+
+h2,
+.h2-like
+{
+    font-size: 18px;
+}
+@media only screen and (max-width: 767px)
+{
+    h2,
+    .h2-like
+    {
+        font-size: 18px;
+    }
+}
+
+h3,
+.h3-like
+{
+    font-size: 16px;
+}
+@media only screen and (max-width: 767px)
+{
+    h3,
+    .h3-like
+    {
+        font-size: 16px;
+    }
+}
+
+h4,
+.h4-like
+{
+    font-size: 14px;
+}
+@media only screen and (max-width: 767px)
+{
+    h4,
+    .h4-like
+    {
+        font-size: 14px;
+    }
+}
+
+h5,
+.h5-like
+{
+    font-size: 14px;
+}
+
+h6,
+.h6-like
+{
+    font-size: 14px;
+}
+
+/*-----------------------------------------------------------------------------------------------------
+    [helpers]
+
+-------------------------------------------------------------------------------------------------------*/
+.clear
+{
+    clear: both;
+}
+
+.clearfix:after
+{
+    display: block;
+    visibility: hidden;
+    clear: both; 
+
+    height: 0;
+
+    content: ' ';
+}
+
+@media only screen and (max-width: 767px)
+{
+    .desktop-only
+    {
+        display: none !important;
+    }
+}
+
+.mobile-only
+{
+    display: none !important;
+}
+@media only screen and (max-width: 767px)
+{
+    .mobile-only
+    {
+        display: block !important;
+    }
+}
+
+/*-----------------------------------------------------------------------------------------------------
+    [commons]
+-------------------------------------------------------------------------------------------------------*/
+*
+{
+    box-sizing: border-box;
+}
+
+/*
+::-webkit-selection { background : #ccc; }
+::-moz-selection { background : #ccc; }
+::selection { background : #ccc; }
+*/
+html
+{
+    height: 100%;
+}
+
+body
+{
+    border: 20px solid #fff; 
+    background: #eae8d6;
+}
+@media only screen and (max-width: 767px)
+{
+    body
+    {
+        border: 10px solid #fff;
+    }
+}
+
+a
+{
+    text-decoration: none;
+
+    color: #000;
+}
+a:hover
+{
+    text-decoration: underline; 
+
+    color: #db4a37;
+}
+
+ul,
+ol
+{
+    margin: 0;
+}
+ul li,
+ol li
+{
+    list-style: none;
+}
+
+img
+{
+    display: block; 
+
+    max-width: 100%;
+    height: auto;
+}
+@media only screen and (max-width: 767px)
+{
+    img
+    {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+blockquote
+{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+    font-style: italic;
+    line-height: 170%; 
+
+    color: #000;
+}
+blockquote p:before
+{
+    content: ' “ ';
+
+    color: #f0f0f0;
+}
+blockquote p:after
+{
+    content: ' ” ';
+
+    color: #f0f0f0;
+}
+
+hr
+{
+    height: 1px; 
+
+    border: none;
+    background: #f0f0f0;
+}
+
+table
+{
+    border-spacing: 0; 
+    border-collapse: collapse;
+}
+table th
+{
+    padding: .2em;
+
+    text-align: left; 
+
+    border: 1px solid gray;
+}
+table td
+{
+    padding: .2em; 
+
+    border: 1px solid gray;
+}
+
+.txtleft
+{
+    text-align: left;
+}
+
+.txtright
+{
+    text-align: right;
+}
+
+.txtcenter
+{
+    text-align: center;
+}
+
+.hidden
+{
+    visibility: hidden;
+}
+
+/*-----------------------------------------------------------------------------------------------------
+    [Buttons]
+
+    + Primary
+    + Secondary
+-------------------------------------------------------------------------------------------------------*/
+/* === Primary === */
+/* === Secondary === */
+/*-----------------------------------------------------------------------------------------------------
+    [Forms]
+
+    + Basics
+        _Error
+
+    + Custom select
+    + Custom Checkbox & Radio
+-------------------------------------------------------------------------------------------------------*/
+/* Basics
+-------------------------------------------------------------------------------------------------------*/
+form p
+{
+    margin-bottom: 20px;
+}
+
+form label
+{
+    font-weight: 600;
+
+    display: block;
+
+    margin-bottom: 10px; 
+
+    color: #000;
+}
+
+button,
+input,
+select,
+textarea
+{
+    font-family: Arial, Helvetica, Arial, sans-serif;
+    font-size: 100%;
+}
+
+form input[type='text'],
+form input[type='email'],
+form input[type='date'],
+form input[type='password'],
+form textarea,
+form select
+{
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+
+    color: #000;
+    border: 1px solid #dbdbdb;
+    -webkit-border-radius: 0;
+    background: #fff;
+
+    -webkit-appearance: none !important;
+}
+
+form select[multiple='multiple']
+{
+    height: auto;
+}
+
+form input[type='radio'],
+form input[type='checkbox']
+{
+    margin: 0 5px 0 0;
+}
+
+form input:disabled
+{
+    font-style: italic; 
+
+    background: #f0f0f0;
+    box-shadow: none;
+}
+
+form input[type='text']:focus,
+form input[type='email']:focus,
+form input[type='date']:focus,
+form input[type='password']:focus,
+form textarea:focus,
+form select:focus
+{
+    border: 1px solid #888;
+}
+
+form textarea
+{
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+
+    vertical-align: top;
+}
+
+form button,
+form input[type='submit']
+{
+    padding-top: 0 !important;
+
+    cursor: pointer;
+}
+
+/* === Error & Alert === */
+form .error-field label
+{
+    color: #ff4160;
+}
+
+form .error-field input[type='text'],
+form .error-field input[type='email'],
+form .error-field input[type='date'],
+form .error-field input[type='password'],
+form .error-field textarea,
+form .error-field select,
+form .error-field .customSelect
+{
+    border: 1px solid #ff4160;
+}
+
+form .error-info
+{
+    font-size: 14px;
+    font-weight: 600;
+    font-style: italic;
+
+    position: relative;
+
+    display: block;
+
+    max-width: 470px; 
+    margin: 10px 0 0 0;
+    padding: 10px;
+
+    color: #fff;
+    background: #ff4160;
+}
+
+form .valid-field input[type='text'],
+form .valid-field input[type='email'],
+form .valid-field input[type='date'],
+form .valid-field input[type='password'],
+form .valid-field textarea,
+form .valid-field select,
+form .valid-field .customSelect
+{
+    border: 1px solid #0047bb;
+}
+
+/* Custom select pointer
+/* DOC : Filament Group | Doc : https://github.com/filamentgroup/select-css/
+-------------------------------------------------------------------------------------------------------*/
+.custom-select
+{
+    position: relative;
+
+    display: block;
+
+    max-width: 470px; 
+
+    border: 1px solid #dbdbdb;
+}
+
+.custom-select select
+{
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+
+    border: 1px solid transparent;
+    outline: none;
+    background: #fff;
+
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+}
+
+.custom-select:after
+{
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    right: 1em;
+
+    width: 8px;
+    height: 4px;
+    margin-top: -2px;
+
+    content: '';
+    pointer-events: none; 
+
+    background-image: url('../img/custom-select-pointer.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.custom-select:hover
+{
+    border-color: #888;
+}
+
+.custom-select select:focus
+{
+    /*border-color: $grey-darker;*/
+    border-color: #fff; 
+    outline: none;
+}
+
+.custom-select option
+{
+    font-weight: normal;
+}
+
+/* START OF UGLY BROWSER-SPECIFIC HACKS */
+x:-o-prefocus,
+.custom-select::after
+{
+    display: none;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+{
+    .custom-select select::-ms-expand
+    {
+        display: none;
+    }
+    .custom-select select:focus::-ms-value
+    {
+        color: #222; 
+        background: transparent;
+    }
+}
+
+@-moz-document url-prefix()
+{
+    .custom-select
+    {
+        overflow: hidden;
+    }
+    .custom-select select
+    {
+        width: 120%;
+        width:      calc(100% + em);
+    }
+}
+
+.custom-select select:-moz-focusring
+{
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+}
+
+/* Custom Checkbox & Radio
+/* DOC : http://www.creativejuiz.fr/blog/tutoriels/personnaliser-aspect-boutons-radio-checkbox-css
+-------------------------------------------------------------------------------------------------------*/
+form .custom-checkbox,
+form .custom-radio
+{
+    line-height: 100%;
+}
+
+form .custom-radio input + label
+{
+    margin-right: 20px;
+    padding-top: 4px;
+}
+
+form .custom-checkbox input[type='checkbox']:not(:checked),
+form .custom-checkbox input[type='checkbox']:checked,
+form .custom-radio input[type='radio']:not(:checked),
+form .custom-radio input[type='radio']:checked
+{
+    position: absolute;
+    left: -9999px;
+}
+
+form .custom-checkbox input[type='checkbox']:not(:checked) + label,
+form .custom-checkbox input[type='checkbox']:checked + label,
+form .custom-radio input[type='radio']:not(:checked) + label,
+form .custom-radio input[type='radio']:checked + label
+{
+    position: relative;
+
+    padding-left: 30px;
+
+    cursor: pointer;
+}
+
+form .custom-checkbox label
+{
+    margin-bottom: 10px;
+}
+
+form .custom-checkbox input[type='checkbox']:not(:checked) + label:before,
+form .custom-checkbox input[type='checkbox']:checked + label:before,
+form .custom-radio input[type='radio']:not(:checked) + label:before,
+form .custom-radio input[type='radio']:checked + label:before
+{
+    position: absolute;
+    top: 3px;
+    left: 1px;
+
+    width: 16px;
+    height: 16px;
+
+    content: '';
+
+    border: 1px solid #dbdbdb;
+    background: #fff;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+}
+
+form .custom-checkbox input[type='checkbox']:not(:checked) + label:before,
+form .custom-checkbox input[type='checkbox']:checked + label:before
+{
+    top: -1px;
+
+    border-radius: 4px;
+}
+
+form .custom-radio input[type='radio']:not(:checked) + label:before,
+form .custom-radio input[type='radio']:checked + label:before
+{
+    border-radius: 20px;
+}
+
+form .custom-checkbox input[type='checkbox']:checked + label:before,
+form .custom-radio input[type='radio']:checked + label:before
+{
+    border: 1px solid #dbdbdb;
+}
+
+form .custom-checkbox input[type='checkbox']:not(:checked) + label:after,
+form .custom-checkbox input[type='checkbox']:checked + label:after,
+form .custom-radio input[type='radio']:not(:checked) + label:after,
+form .custom-radio input[type='radio']:checked + label:after
+{
+    font-size: 14px;
+
+    position: absolute;
+    top: 0;
+    left: 5px;
+
+    content: '✔';
+
+    color: #4b4a4d;
+}
+
+form .custom-radio input[type='radio']:not(:checked) + label:after,
+form .custom-radio input[type='radio']:checked + label:after
+{
+    top: 8px;
+    left: 6px;
+
+    width: 8px;
+    height: 8px;
+
+    content: '';
+
+    border-radius: 10px; 
+    background: #4b4a4d;
+}
+
+form .custom-checkbox input[type='checkbox']:not(:checked) + label:after,
+form .custom-radio input[type='radio']:not(:checked) + label:after
+{
+    opacity: 0;
+}
+
+form .custom-checkbox input[type='checkbox']:checked + label:after,
+form .custom-radio input[type='radio']:checked + label:after
+{
+    opacity: 1;
+}
+
+form .custom-checkbox input[type='checkbox']:disabled:not(:checked) + label:before,
+form input[type='checkbox']:disabled:checked + label:before
+{
+    border-color: #bbb;
+    background-color: #ddd; 
+    box-shadow: none;
+}
+
+form .custom-checkbox input[type='checkbox']:disabled:checked + label:after
+{
+    color: #999;
+}
+
+form .custom-checkbox input[type='checkbox']:disabled + label
+{
+    color: #aaa;
+}
+
+form .custom-checkbox input[type='checkbox']:checked:focus + label:before,
+form .custom-checkbox input[type='checkbox']:not(:checked):focus + label:before
+{
+    /*border: 1px dotted blue; */
+}
+
+/*-----------------------------------------------------------------------------------------------------
+    [icons]
+-------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------
+    [breadcrumb]
+-------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------
+    [pagination]
+-------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------
+    [block-author]
+-------------------------------------------------------------------------------------------------------*/
+.block-author
+{
+    max-width: 340px;
+    min-height: 320px;
+
+    transition: 200ms; 
+    text-align: center;
+}
+.block-author .img
+{
+    display: block;
+
+    margin: 0 auto;
+}
+.block-author .img img
+{
+    display: block;
+}
+.block-author .text
+{
+    padding: 20px; 
+
+    background: #fff;
+}
+.block-author .text h2
+{
+    font-size: 24px;
+    font-weight: 400; 
+
+    text-align: center;
+}
+.block-author .text p
+{
+    font-family: 'Montserrat', sans-serif;
+
+    margin-bottom: 10px;
+}
+.block-author .text .social-link > li a
+{
+    font-size: 12px;
+
+    color: #888;
+}
+.block-author .text .social-link > li a:hover
+{
+    color: #db4a37;
+}
+.block-author:hover
+{
+    box-shadow: 0 0 4px rgba(0, 0, 0, .2);
+}
+
+/*-----------------------------------------------------------------------------------------------------
+    [header]
+-------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------
+    [footer]
+-------------------------------------------------------------------------------------------------------*/
+.footer
+{
+    margin: 40px 0;
+}
+.footer p
+{
+    text-align: center;
+}
+
+/*-----------------------------------------------------------------------------------------------------
+    [nav]
+-------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------
+    [list-author]
+-------------------------------------------------------------------------------------------------------*/
+.list-author
+{
+    text-align: center;
+}
+.list-author > li
+{
+    display: inline-block;
+
+    margin: 0 40px 40px 40px;
+
+    opacity: 0;
+}
+@media only screen and (max-width: 767px)
+{
+    .list-author > li
+    {
+        margin: 0 10px 20px 10px;
+    }
+}
+
+/*-----------------------------------------------------------------------------------------------------
+    [homepage]
+-------------------------------------------------------------------------------------------------------*/
+.main
+{
+    padding: 40px;
+}
+@media only screen and (max-width: 767px)
+{
+    .main
+    {
+        padding: 20px 10px;
+    }
+}
+.main h1
+{
+    font-family: 'Hammersmith One', sans-serif;
+    font-size: 120px;
+    line-height: 110%; 
+
+    margin-bottom: 10px;
+
+    text-align: center;
+    letter-spacing: 30px;
+    text-transform: uppercase;
+
+    color: #333;
+}
+@media only screen and (max-width: 767px)
+{
+    .main h1
+    {
+        font-size: 30px;
+
+        letter-spacing: 10px;
+    }
+}
+.main h1 + p
+{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    line-height: 110%; 
+
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+
+    text-align: center;
+}
+@media only screen and (max-width: 767px)
+{
+    .main h1 + p
+    {
+        font-size: 14px;
+        line-height: 120%; 
+
+        letter-spacing: 5px;
+    }
+    .main h1 + p span
+    {
+        display: none;
+    }
+}

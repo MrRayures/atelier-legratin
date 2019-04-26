@@ -1,0 +1,287 @@
+<!doctype html> 
+<html lang="fr">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8"> 
+  <title>Atelier Le Gratin</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="google-site-verification" content="980sm0EsouY9ILr9s5HKypkoMvEhP-AzeokWvBTlF60" />
+	
+	<link rel="apple-touch-icon" sizes="57x57" href="assets/favicons/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="assets/favicons/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="assets/favicons/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="assets/favicons/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="assets/favicons/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="assets/favicons/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="assets/favicons/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="assets/favicons/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon-180x180.png">
+	<link rel="icon" type="image/png" href="assets/favicons/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="assets/favicons/android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="assets/favicons/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="assets/favicons/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="assets/favicons/manifest.json">
+	<link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#e7871d">
+	<link rel="shortcut icon" href="assets/favicons/favicon.ico">
+	<meta name="msapplication-TileColor" content="#e7871d">
+	<meta name="msapplication-TileImage" content="assets/favicons/mstile-144x144.png">
+	<meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+	<link href='https://fonts.googleapis.com/css?family=Hammersmith+One' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" type="text/css" href="assets/css/app.css">
+	<!--[if lt IE 9]>
+		<script src="assets/vendor/html5shiv/dist/html5shiv.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<header class="header" role="banner">
+
+	</header><!-- /END Header  -->	
+	<div class="main" role="main">
+		<h1>Le Gratin</h1>
+		<p>auteurs <span>.</span> dessinateurs <span>.</span> graphistes <span>.</span> webdesigners <span>.</span> réalisateurs <br> - <br> Atelier collectif basé à Angoulême</p>
+		
+	  <ul class="list-author clearfix" id="app">
+	  	<li v-for="author in authors">
+	  		<article class="block-author">
+					<a class="img" v-bind:href="author.url" target="_blank">
+						<img v-bind:src="img_path+author.avatar" alt="" width="400" height="400">
+					</a>
+					<div class="text">
+						<h2>{{ author.name }}</h2>
+						<p>{{ author.job }}</p>
+						<ul class="social-link">
+							<li><a v-bind:href="author.url" target="_blank">{{ author.url }}</a></li>
+							<li><a v-bind:href="`mailto:${author.email}`">{{ author.email }}</a></li>
+						</ul>
+					</div>
+				</article>
+	  	</li>
+	  </ul>
+
+
+
+
+		<ul class="list-author clearfix">
+			<li>
+				<article class="block-author">
+					<a class="img" href="http://alexclerisse.over-blog.com" target="_blank">
+						<img src="assets/img/alexandre-clerisse.jpg" alt="" width="400" height="400">
+					</a>
+					<div class="text">
+						<h2>Alexandre Clérisse</h2>
+						<p>auteur, illustrateur, graphiste</p>
+						<ul class="social-link">
+							<li><a href="http://alexclerisse.over-blog.com" target="_blank">alexclerisse.over-blog.com</a></li>
+							<li><a href="mailto:alexandre.clerisse@gmail.com">alexandre.clerisse@gmail.com</a></li>
+						</ul>
+					</div>
+				</article>
+
+			</li>
+			<li>
+				<article class="block-author">
+					<a class="img" href="http://camillemarinejulie.com" target="_blank">
+						<img src="assets/img/camille-marine-julie.jpg" alt="" width="400" height="400">
+					</a>
+					<div class="text">
+						<h2>Camille Marine Julie</h2>
+						<p>réalisatrice de documentaire</p>
+						<ul class="social-link">
+							<li><a href="http://camillemarinejulie.com" target="_blank">camillemarinejulie.com</a></li>
+							<li><a href="mailto:camillemarinejulie@gmail.com">camillemarinejulie@gmail.com</a></li>
+						</ul>
+					</div>
+				</article>
+
+			</li>
+			<li>
+				<article class="block-author">
+					<a class="img" href="http://mr-rayures.com" target="_blank">
+						<img src="assets/img/francois-leproust.jpg" alt="" width="400" height="400">
+					</a>
+					<div class="text">
+						<h2>François Leproust</h2>
+						<p>webdesigner & developpeur front-end</p>
+						<ul class="social-link">
+							<li><a href="http://mr-rayures.com" target="_blank">mr-rayures.com</a></li>
+							<li><a href="mailto:hello@mr-rayures.com">hello@mr-rayures.com</a></li>
+						</ul>
+					</div>
+				</article>
+
+			</li>
+			<li>
+				<article class="block-author">
+					<a class="img" href="http://gorosaure.ultra-book.com" target="_blank">
+						<img src="assets/img/julie-gore.jpg" alt="" width="400" height="400">
+					</a>
+					<div class="text">
+						<h2>Julie Gore</h2>
+						<p>auteure, illustratrice</p>
+						<ul class="social-link">
+							<li><a href="http://gorosaure.ultra-book.com" target="_blank">gorosaure.ultra-book.com</a></li>
+							<li><a href="mailto:goregraph@gmail.com">goregraph@gmail.com</a></li>
+						</ul>
+					</div>
+				</article>
+
+			</li>
+			<li>
+				<article class="block-author">
+					<a class="img" href="http://laurentbourlaud.tumblr.com" target="_blank">
+						<img src="assets/img/laurent-bourlaud.jpg" alt="" width="400" height="400">
+					</a>
+					<div class="text">
+						<h2>Laurent Bourlaud</h2>
+						<p>auteur, illustrateur, graphiste</p>
+						<ul class="social-link">
+							<li><a href="http://laurentbourlaud.tumblr.com" target="_blank">laurentbourlaud.tumblr.com</a></li>
+							<li><a href="mailto:laurent.bourlaud@gmail.com">laurent.bourlaud@gmail.com</a></li>
+						</ul>
+					</div>
+				</article>
+
+			</li>
+			<li>
+				<article class="block-author">
+					<a class="img" href="http://mylene-rigaudie.ultra-book.com" target="_blank">
+						<img src="assets/img/mylene-rigaudie.jpg" alt="" width="400" height="400">
+					</a>
+					<div class="text">
+						<h2>Mylène Rigaudie</h2>
+						<p>illustratrice jeunesse</p>
+						<ul class="social-link">
+							<li><a href="http://mylene-rigaudie.ultra-book.com" target="_blank">mylene-rigaudie.ultra-book.com</a></li>
+							<li><a href="mailto:rigaudie.mylene@gmail.com">rigaudie.mylene@gmail.com</a></li>
+						</ul>
+					</div>
+				</article>
+
+			</li>
+			<li>
+				<article class="block-author">
+					<a class="img" href="http://natachasicaud.ultra-book.com/portfolio" target="_blank">
+						<img src="assets/img/natacha-sicaud.jpg" alt="" width="400" height="400">
+					</a>
+					<div class="text">
+						<h2>Natacha Sicaud</h2>
+						<p>auteure, illustratrice</p>
+						<ul class="social-link">
+							<li><a href="http://natachasicaud.ultra-book.com/portfolio" target="_blank">natachasicaud.ultra-book.com/portfolio</a></li>
+							<li><a href="mailto:sicaudnatacha@yahoo.fr">sicaudnatacha@yahoo.fr</a></li>
+						</ul>
+					</div>
+				</article>
+
+			</li>
+			<li>
+				<article class="block-author">
+					<a class="img" href="http://nicolasgazeau.ultra-book.com" target="_blank">
+						<img src="assets/img/nicolas-gazeau.jpg" alt="" width="400" height="400">
+					</a>
+					<div class="text">
+						<h2>Nicolas Gazeau</h2>
+						<p>auteur, illustrateur</p>
+						<ul class="social-link">
+							<li><a href="http://nicolasgazeau.ultra-book.com" target="_blank">nicolasgazeau.ultra-book.com</a></li>
+							<li><a href="mailto:nicolas7gazeau@gmail.com">nicolas7gazeau@gmail.com</a></li>
+						</ul>
+					</div>
+				</article>
+
+			</li>
+			<li>
+				<article class="block-author">
+					<a class="img" href="http://nicolasglorieux.wix.com/video" target="_blank">
+						<img src="assets/img/nicolas-glorieux.jpg" alt="" width="400" height="400">
+					</a>
+					<div class="text">
+						<h2>Nicolas Glorieux</h2>
+						<p>réalisateur de documentaire</p>
+						<ul class="social-link">
+							<li><a href="http://nicolasglorieux.wix.com/video" target="_blank">nicolasglorieux.wix.com/video</a></li>
+							<li><a href="mailto:nicolas.t.glorieux@gmail.com">nicolas.t.glorieux@gmail.com</a></li>
+						</ul>
+					</div>
+				</article>
+
+			</li>
+			<li>
+				<article class="block-author">
+					<a class="img" href="http://facebook.com/olivier.thomas.9081" target="_blank">
+						<img src="assets/img/olivier-thomas.jpg" alt="" width="400" height="400">
+					</a>
+					<div class="text">
+						<h2>Olivier Thomas</h2>
+						<p>dessinateur BD</p>
+						<ul class="social-link">
+							<li><a href="http://facebook.com/olivier.thomas.9081" target="_blank">facebook.com/olivier.thomas.9081</a></li>
+							<li><a href="mailto:olivezthomas@gmail.com">olivezthomas@gmail.com</a></li>
+						</ul>
+					</div>
+				</article>
+
+			</li>
+			<li>
+				<article class="block-author">
+					<a class="img" href="http://little-misspaty.blogspot.fr/" target="_blank">
+						<img src="assets/img/miss-paty.jpg" alt="" width="400" height="400">
+					</a>
+					<div class="text">
+						<h2>Miss Paty</h2>
+						<p>auteure de BD, illustratrice</p>
+						<ul class="social-link">
+							<li><a href="http://little-misspaty.blogspot.fr/" target="_blank">little-misspaty.blogspot.fr/</a></li>
+							<li><a href="mailto:little.misspaty@gmail.com">little.misspaty@gmail.com</a></li>
+						</ul>
+					</div>
+				</article>
+
+			</li>
+			<li>
+				<article class="block-author">
+					<a class="img" href="http://miniludvin.tumblr.com" target="_blank">
+						<img src="assets/img/ludivine.jpg" alt="" width="400" height="400">
+					</a>
+					<div class="text">
+						<h2>Mini Ludvin</h2>
+						<p>auteure, illustratrice, scenariste</p>
+						<ul class="social-link">
+							<li><a href="http://miniludvin.tumblr.com" target="_blank">miniludvin.tumblr.com</a></li>
+							<li><a href="mailto:miniludvin@gmail.com">miniludvin@gmail.com</a></li>
+						</ul>
+					</div>
+				</article>
+
+			</li>
+		</ul>
+	</div><!-- /END Main  -->	
+	<footer class="footer" role="contentinfo">
+<p>Retrouvez-nous sur <a href="https://www.facebook.com/ateliergratin/" target="_blank">Facebook</a></p>
+	</footer><!-- /END Footer  -->	
+	
+
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<script type="text/javascript" src="assets/vendor/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/app.js"></script>
+
+	
+
+
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-9456187-8', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+</body>
+</html>
