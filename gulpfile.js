@@ -13,6 +13,8 @@ const del = require('del');
 const rename = require('gulp-rename');
 const replace = require('gulp-replace');
 const merge = require('merge-stream');
+const browserSync = require('browser-sync');
+const server = browserSync.create();
 
 //CSS
 const sass = require('gulp-sass');
@@ -105,7 +107,7 @@ function html() {
 * Concat + babel
 */
 function js() {
-  return src([source + '/assets/js/*.js'])
+  return src([source + '/assets/js/*.js', '!'+source + '/assets/js/service-worker.js'])
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(sourcemaps.init())
     .pipe(babel({ presets: ['env'] }))
@@ -169,10 +171,13 @@ function copy_assets() {
   var pwa_manifest = src([source + '/manifest.json'])
     .pipe(dest([prod]));
 
+  var service_workers = src([source + '/service-worker.js'])
+    .pipe(dest([prod]));
+
   var fonts = src([source + '/assets/fonts/*'])
     .pipe(dest([prod + '/assets/fonts']));
 
-  return merge(favicon, fonts, pwa_manifest, pwa_icons);
+  return merge(favicon, fonts, pwa_manifest, pwa_icons, service_workers);
 };
 
 
@@ -294,6 +299,24 @@ function clean() {
 
 
 /*
+* Browser Sync task
+*/
+function reload(done) {
+  server.reload();
+  done();
+}
+
+function serve(done) {
+  server.init({
+    server: {
+      baseDir: prod
+    }
+  });
+  done();
+}
+
+
+/*
 * WATCH task
 * CSS > compile and minify
 * JS > compile & minify
@@ -302,11 +325,11 @@ function clean() {
 * HTML > compile
 */
 function watch_files() {
-  watch([source + '/assets/scss/*.scss', source + '/assets/scss/**/*'], series(css, css_minify))
-  watch([source + '/assets/js/*.js'], series(js, js_vendor, js_minify))
-  watch([source + '/assets/images/*.{png,jpg,jpeg,gif,svg}', source + '/assets/images/**/*.{png,jpg,jpeg,gif,svg}'], series(img))
-  watch([source + '/assets/icons/*.svg', source + '/assets/icons/**/*.svg'], series(icons, icons_css))
-  watch([source + '/*.html', source + '/templates/**/*.html'], series(html))
+  watch([source + '/assets/scss/*.scss', source + '/assets/scss/**/*'], series(css, css_minify, reload))
+  watch([source + '/assets/js/*.js'], series(js, js_vendor, js_minify, reload))
+  watch([source + '/assets/images/*.{png,jpg,jpeg,gif,svg}', source + '/assets/images/**/*.{png,jpg,jpeg,gif,svg}'], series(img, reload))
+  watch([source + '/assets/icons/*.svg', source + '/assets/icons/**/*.svg'], series(icons, icons_css, reload))
+  watch([source + '/*.html', source + '/templates/**/*.html'], series(html, reload))
 }
 
 
@@ -330,7 +353,7 @@ exports.icons = icons;
 exports.icons_css = icons_css;
 exports.clean = clean;
 exports.build = build;
-exports.watch = watch_files;
+exports.watch = parallel(watch_files, serve);
 exports.default = build;
 
 

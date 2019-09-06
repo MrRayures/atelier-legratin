@@ -18,6 +18,7 @@
     "del": "latest",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "latest",
+    "browser-sync": "latest",
     "gulp-babel": "latest",
     "gulp-concat": "latest",
     "gulp-csso": "latest",

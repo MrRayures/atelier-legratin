@@ -6,7 +6,9 @@
   <title>{{ page_title }}</title> 
 	<meta name="description" content="Le Gratin, atelier collectif basé à Angoulême : auteurs, dessinateurs, graphistes, webdesigners, réalisateurs">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#eae8d6"/>
 	<meta name="google-site-verification" content="980sm0EsouY9ILr9s5HKypkoMvEhP-AzeokWvBTlF60" />
+	
 
 	<link rel='manifest' href='manifest.json'>
 
@@ -38,6 +40,16 @@
 	{% if js_base %}
 		<script type="text/javascript" src="assets/js/vendor.min.js"></script>
 		<script type="text/javascript" src="assets/js/app.min.js"></script>
+
+		<script>
+		// Check that service workers are supported
+		if ('serviceWorker' in navigator) {
+		  // Use the window load event to keep the page load performant
+		  window.addEventListener('load', () => {
+		    navigator.serviceWorker.register('service-worker.js');
+		  });
+		}
+		</script>
 	{% endif %}
 
 	
