@@ -163,8 +163,8 @@ function copy_assets() {
   var favicon = src([source + '/apple-touch-icon.png', source + '/favicon.ico'])
     .pipe(dest([prod]));
 
-  var fonts = src([source + '/assets/images/fonts/*'])
-    .pipe(dest([prod + '/assets/images/fonts/']));
+  var fonts = src([source + '/assets/fonts/*'])
+    .pipe(dest([prod + '/assets/fonts']));
 
   return merge(favicon, fonts);
 };
