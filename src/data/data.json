@@ -5,7 +5,7 @@
 			"id"     : "alexandre-clerisse",
 			"name"   : "Alexandre Clérisse",
 			"desc"   : "",
-			"avatar" : "alexandre-clerisse.jpg",
+			"avatar" : "alexandre-clerisse",
 			"job"    : "auteur, illustrateur, graphiste",
 			"email"  : "alexandre.clerisse@gmail.com",
 			"website": "http://alexclerisse.over-blog.com/"
@@ -14,7 +14,7 @@
 			"id"     : "francois-leproust",
 			"name"   : "François Leproust",
 			"desc"   : "",
-			"avatar" : "francois-leproust.jpg",
+			"avatar" : "francois-leproust",
 			"job"    : "webdesigner & developpeur front-end",
 			"email"  : "hello@mr-rayures.com",
 			"website": "https://mr-rayures.com/"
@@ -23,7 +23,7 @@
 			"id"     : "natacha-sicaud",
 			"name"   : "Natacha Sicaud",
 			"desc"   : "",
-			"avatar" : "natacha-sicaud.jpg",
+			"avatar" : "natacha-sicaud",
 			"job"    : "auteure, illustratrice",
 			"email"  : "sicaudnatacha@yahoo.fr",
 			"website": "http://natachasicaud.ultra-book.com/portfolio"
@@ -32,7 +32,7 @@
 			"id"     : "nicolas-glorieux",
 			"name"   : "Nicolas Glorieux",
 			"desc"   : "",
-			"avatar" : "nicolas-glorieux.jpg",
+			"avatar" : "nicolas-glorieux",
 			"job"    : "réalisateur de documentaire",
 			"email"  : "nicolas.t.glorieux@gmail.com",
 			"website": "http://nicolasglorieux.wix.com/video"
@@ -41,7 +41,7 @@
 			"id"     : "olivier-thomas",
 			"name"   : "Olivier Thomas",
 			"desc"   : "",
-			"avatar" : "olivier-thomas.jpg",
+			"avatar" : "olivier-thomas",
 			"job"    : "dessinateur BD",
 			"email"  : "olivezthomas@gmail.com",
 			"website": "http://facebook.com/olivier.thomas.9081"
@@ -50,7 +50,7 @@
 			"id"     : "mini-ludvin",
 			"name"   : "Mini Ludvin",
 			"desc"   : "",
-			"avatar" : "ludivine.jpg",
+			"avatar" : "ludivine",
 			"job"    : "auteure, illustratrice, scenariste",
 			"email"  : "miniludvin@gmail.com",
 			"website": "http://miniludvin.tumblr.com/"
@@ -59,7 +59,7 @@
 			"id"     : "nicolas-gazeau",
 			"name"   : "Nicolas Gazeau",
 			"desc"   : "",
-			"avatar" : "nicolas-gazeau.jpg",
+			"avatar" : "nicolas-gazeau",
 			"job"    : "auteur, illustrateur",
 			"email"  : "nicolas7gazeau@gmail.com",
 			"website": "http://nicolasgazeau.ultra-book.com/"
@@ -68,7 +68,7 @@
 			"id"     : "laurent-bourlaud",
 			"name"   : "Laurent Bourlaud",
 			"desc"   : "",
-			"avatar" : "laurent-bourlaud.jpg",
+			"avatar" : "laurent-bourlaud",
 			"job"    : "auteur, illustrateur, graphiste",
 			"email"  : "laurentbourlaud.tumblr.com",
 			"website": "http://laurentbourlaud.tumblr.com/"
@@ -77,7 +77,7 @@
 			"id"     : "mylene-rigaudie",
 			"name"   : "Mylène Rigaudie",
 			"desc"   : "",
-			"avatar" : "mylene-rigaudie.jpg",
+			"avatar" : "mylene-rigaudie",
 			"job"    : "illustratrice jeunesse",
 			"email"  : "rigaudie.mylene@gmail.com",
 			"website": "http://mylene-rigaudie.ultra-book.com/"
@@ -86,7 +86,7 @@
 			"id"     : "julie-gore",
 			"name"   : "Julie Gore",
 			"desc"   : "",
-			"avatar" : "julie-gore.jpg",
+			"avatar" : "julie-gore",
 			"job"    : "auteure, illustratrice",
 			"email"  : "goregraph@gmail.com",
 			"website": "http://www.juliegore.com"
@@ -95,7 +95,7 @@
 			"id"     : "camille-marine-julie",
 			"name"   : "Camille Marine Julie",
 			"desc"   : "",
-			"avatar" : "camille-marine-julie.jpg",
+			"avatar" : "camille-marine-julie",
 			"job"    : "réalisatrice de documentaire",
 			"email"  : "camillemarinejulie@gmail.com",
 			"website": "http://camillemarinejulie.com/"
@@ -104,7 +104,7 @@
 			"id"   : "miss-paty",
 			"name"   : "Miss Paty",
 			"desc"   : "",
-			"avatar" : "miss-paty.jpg",
+			"avatar" : "miss-paty",
 			"job"    : "auteure de BD, illustratrice",
 			"email"  : "little.misspaty@gmail.com",
 			"website": "http://little-misspaty.blogspot.fr/"

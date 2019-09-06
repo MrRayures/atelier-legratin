@@ -12,6 +12,7 @@ const notify = require("gulp-notify");
 const del = require('del');
 const rename = require('gulp-rename');
 const replace = require('gulp-replace');
+const merge = require('merge-stream');
 
 //CSS
 const sass = require('gulp-sass');
@@ -119,13 +120,25 @@ function js() {
 * Minify JS for PROD
 */
 function js_minify() {
-  return src([prod + '/assets/js/app.js'])
+  return src([prod + '/assets/js/app.js', prod + '/assets/js/vendor.js'])
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(minify({
       ext:{
         min:'.min.js'
       }
     }))
+    .pipe(dest(prod + '/assets/js/'))
+};
+
+
+/*
+* JS Vendor
+* Concat + babel
+*/
+function js_vendor() {
+  return src([source + '/assets/js/vendor/*.js'])
+    .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
+    .pipe(concat('vendor.js'))
     .pipe(dest(prod + '/assets/js/'))
 };
 
@@ -147,8 +160,13 @@ function img() {
 * Copy assets
 */
 function copy_assets() {
-  return src([source + '/apple-touch-icon.png', source + '/favicon.ico'])
+  var favicon = src([source + '/apple-touch-icon.png', source + '/favicon.ico'])
     .pipe(dest([prod]));
+
+  var fonts = src([source + '/assets/images/fonts/*'])
+    .pipe(dest([prod + '/assets/images/fonts/']));
+
+  return merge(favicon, fonts);
 };
 
 
@@ -158,13 +176,13 @@ function copy_assets() {
 * Edit size and add as much as you want
 */
 function img_responsive() {
-  return src([source + '/assets/images/responsive/*.{png,jpg,jpeg}'], {since: lastRun(img_responsive)})
+  return src([source + '/assets/images/*.{png,jpg,jpeg}'], {since: lastRun(img_responsive)})
     .pipe(responsive({
       '*': [
+        {width: 400, height: 400, rename: { suffix: '-400', extname: '.jpg'}},
         {width: 800, height: 800, rename: { suffix: '-800', extname: '.jpg'}},
-        {width: 1600, height: 1600, rename: { suffix: '-1600', extname: '.jpg'}},
-        {width: 800, height: 800, rename: { suffix: '-800', extname: '.webp'}},
-        {width: 1600, height: 1600, rename: { suffix: '-1600', extname: '.webp'}}
+        {width: 400, height: 400, rename: { suffix: '-400', extname: '.webp'}},
+        {width: 800, height: 800, rename: { suffix: '-800', extname: '.webp'}}
       ]
     }))
     .pipe(dest([prod + '/assets/images/responsive/']));
@@ -180,6 +198,24 @@ function img_placeholder() {
     }))
     .pipe(dest([prod + '/assets/images/default/']));
 };
+
+
+
+/*
+* Convert img in webp
+* Use : 
+* gulp img_webp --file=assets/images/folder/ or gulp img_webp
+*/
+function img_webp() {
+  return src([source + '/assets/images/author/*.{png,jpg,jpeg}'])
+    .pipe(responsive({
+      '*': [
+        {rename: { extname: '.webp'}},
+      ]
+    }))
+    .pipe(dest([prod + '/assets/images/author']));
+};
+
 
 /*
 * ICONS task
@@ -261,8 +297,8 @@ function clean() {
 */
 function watch_files() {
   watch([source + '/assets/scss/*.scss', source + '/assets/scss/**/*'], series(css, css_minify))
-  watch([source + '/assets/js/*.js'], series(js, js_minify))
-  watch([source + '/assets/images/*.{png,jpg,jpeg,gif,svg}', source + '/assets/images/**/*.{png,jpg,jpeg,gif,svg}'], series(img, img_responsive))
+  watch([source + '/assets/js/*.js'], series(js, js_vendor, js_minify))
+  watch([source + '/assets/images/*.{png,jpg,jpeg,gif,svg}', source + '/assets/images/**/*.{png,jpg,jpeg,gif,svg}'], series(img))
   watch([source + '/assets/icons/*.svg', source + '/assets/icons/**/*.svg'], series(icons, icons_css))
   watch([source + '/*.html', source + '/templates/**/*.html'], series(html))
 }
@@ -272,12 +308,14 @@ function watch_files() {
 * Define complex tasks
 * !This part is still in WIP
 */
-const build = series(clean, css, css_minify, img, html, js, js_minify, copy_assets);
+const build = series(clean, css, css_minify, img, img_webp, html, js, js_vendor, js_minify, copy_assets);
 
 /*
 * Public function
 */
 exports.img = series(img);
+exports.img_responsive = img_responsive;
+exports.img_webp = img_webp;
 exports.copy = copy_assets;
 exports.css = series(css, css_minify);
 exports.js = series(js, js_minify);

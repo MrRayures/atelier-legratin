@@ -5,6 +5,19 @@
 */
 
 
+/*
+* lazysizes for lazy IMG
+* Infos : https://github.com/aFarkas/lazysizes
+*/
+var lazy = function lazy() {
+  document.addEventListener('lazyloaded', function (e)  {
+    e.target.parentNode.classList.add('image-loaded');
+    e.target.parentNode.classList.remove('loading');
+  });
+}
+lazy();
+
+
 /*  
 * Breackpoint 
 * Based on CSS breackpoint (scss/helpers/variables)
