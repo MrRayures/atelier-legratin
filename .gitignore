@@ -1,6 +1,7 @@
 # Build & publish directory
 /_build
 /.publish
+/dist
 # /dist
 # Created by https://www.gitignore.io
 
