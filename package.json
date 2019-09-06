@@ -1,0 +1,46 @@
+{
+  "name": "rayures-framework",
+  "version": "0.0.1",
+  "description": "A html/scss/& more framework powered by Gulp for my projects",
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrRayures/rayures-framework.git"
+  },
+  "author": "MrRayures aka François Leproust",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MrRayures/rayures-framework/issues"
+  },
+  "devDependencies": {
+    "gulp": "latest",
+    "del": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-concat": "latest",
+    "gulp-csso": "latest",
+    "gulp-iconfont": "latest",
+    "gulp-iconfont-css": "latest",
+    "gulp-imagemin": "latest",
+    "gulp-notify": "latest",
+    "gulp-nunjucks-render": "latest",
+    "gulp-data": "latest",
+    "gulp-plumber": "latest",
+    "gulp-real-favicon": "latest",
+    "gulp-rename": "latest",
+    "gulp-sass": "latest",
+    "gulp-sourcemaps": "latest",
+    "gulp-babel": "latest",
+    "@babel/core": "^7.0.0",
+    "babel-preset-env": "latest",
+    "gulp-minify": "latest",
+    "gulp-svg-sprite": "latest",
+    "gulp-sass-inline-svg": "latest",
+    "gulp-svgmin": "latest",
+    "gulp-replace": "latest",
+    "gulp-responsive": "2.12.0"
+  },
+  "dependencies": {
+    "node-sass": "latest",
+    "rimraf": "latest"
+  }
+}

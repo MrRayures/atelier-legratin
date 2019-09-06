@@ -1,0 +1,195 @@
+/*-----------------------------------------------------------------------------------------------------
+    [utilities]
+-------------------------------------------------------------------------------------------------------*/
+
+/*
+* Text helpers
+*/
+.u-text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  white-space: nowrap;
+}
+.u-text-left { 
+  text-align: left; 
+}
+
+.u-text-right { 
+  text-align: right; 
+}
+
+.u-text-center { 
+  text-align: center; 
+}
+
+
+/*
+* Color
+*/
+@each $color_name , $color_value in (primary , $primary),
+                                    (secondary , $secondary),
+                                    (alert , $alert),
+                                    (warning , $warning),
+                                    (success , $success),
+                                    (info , $info) {
+  .u-text-#{$color_name} {
+    color: #{$color_value}
+  }
+}
+
+/*
+* Background
+*/
+@each $color_name , $color_value in (primary , $primary),
+                                    (secondary , $secondary),
+                                    (alert , $alert),
+                                    (warning , $warning),
+                                    (success , $success),
+                                    (info , $info) {
+  .u-bg-#{$color_name} {
+    color: #{$color_value}
+  }
+}
+
+
+/*
+* Spacing : Margin & padding
+* Default $spacing : 10px;
+* 10px to 50px every 10px
+* Edit : Change global '$spacing' in helpers/_variables
+*/
+@for $i from 0 through 5 {
+  .u-mt#{$i*10} { margin-top: $i * $spacing; }
+  .u-mr#{$i*10} { margin-right: $i * $spacing; }
+  .u-mb#{$i*10} { margin-bottom: $i * $spacing; }
+  .u-ml#{$i*10} { margin-left: $i * $spacing; }
+  .u-pt#{$i*10} { padding-top: $i * $spacing; }
+  .u-pr#{$i*10} { padding-right: $i * $spacing; }
+  .u-pb#{$i*10} { padding-bottom: $i * $spacing; }
+  .u-pl#{$i*10} { padding-left: $i * $spacing; }
+}
+
+
+/*
+* Icon size
+* To 2px to 60px
+*/
+$base-size   : 2px;
+@for $i from 0 through 30 {
+  .u-icon#{$i*2} { font-size: $i * $base-size!important; }
+}
+
+/*
+* Visibility
+*/
+.u-show {
+  display: block!important;
+}
+.u-hide {
+  display: none!important;
+}
+.u-hidden {
+  visibility: hidden;
+}
+// Visible for screen reader
+.u-sr-only {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.u-show-on-focus {
+  position: absolute;
+  top: -100%;
+  z-index: 1000;
+  &:focus {
+    top: 0;
+    background-color: #222;
+    color: #FFF;
+  }
+}
+
+
+/*
+* Responsive
+* TO CHECK
+*/
+.u-hidden-xs {
+  @include mq($xsmall, 0) {
+    display: none;
+  }
+}
+.u-hidden-sm {
+  @include mq($small, 0) {
+    display: none;
+  }
+}
+.u-hidden-md {
+  @include mq(0, $medium) {
+    display: none;
+  }
+}
+.u-hidden-lg {
+  @include mq(0, $large) {
+    display: none;
+  }
+}
+.u-hidden-xlg {
+  @include mq(0, $xlarge) {
+    display: none;
+  }
+}
+
+/* Only visible  */
+.u-visible-xs {
+  display: none;
+  @include mq($xsmall) {
+    display: inherit;
+  }
+}
+.u-visible-sm {
+  display: none;
+  @include mq($small) {
+    display: inherit;
+  }
+}
+.u-visible-md {
+  display: none;
+  @include mq($medium) {
+    display: inherit;
+  }
+}
+.u-visible-lg {
+  display: none;
+  @include mq($large) {
+    display: inherit;
+  }
+}
+
+.u-visible-xlg {
+  display: none;
+  @include mq($xlarge) {
+    display: inherit;
+  }
+}
+
+
+
+/*
+* Clear
+*/
+.u-clear {
+  clear: both;
+}
+
+.u-clearfix:after {
+   content: " ";
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+

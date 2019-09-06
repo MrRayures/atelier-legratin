@@ -1,0 +1,36 @@
+/*-----------------------------------------------------------------------------------------------------
+    [header]
+-------------------------------------------------------------------------------------------------------*/
+
+.m-header {}
+.m-header__title {
+	font-size: 12rem;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	color: #333;
+	font-family: $primary-font;
+	letter-spacing: 30px;
+	line-height: 110%;
+	@include mq($small) {
+		font-size: 3rem;
+		letter-spacing: 10px;
+	}
+}
+.m-header__desc {
+	text-align: center;
+	max-width: 800px;
+	margin: 0 auto 40px auto;
+	font-size: 1.8rem;
+	font-family: $secondary-font;
+	line-height: 110%;
+	@include mq($small) {
+		font-size: 1.4rem;
+		letter-spacing: 5px;
+		line-height: 120%;
+		span {
+			display: none;
+		}
+	}
+}

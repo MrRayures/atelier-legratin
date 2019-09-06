@@ -1,0 +1,86 @@
+/*-----------------------------------------------------------------------------------------------------
+    [commons]
+-------------------------------------------------------------------------------------------------------*/
+/* 
+::-webkit-selection { background : $selection; }
+::-moz-selection { background : $selection; }
+::selection { background : $selection; }
+*/
+
+html {
+  //scroll-behavior: smooth;
+}
+
+body { 
+  background: $bg-color;
+  border: 20px solid #fff;
+  @include mq($small) {
+    border: 10px solid #fff;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $text-color;
+  transition: 200ms;
+  &:hover {
+    color: $primary;
+  }
+  &:visited {}
+  &:focus {
+    color: $primary;
+  }
+  &:active {}
+}
+
+ul,
+ol { 
+  margin: 0;
+  li {
+    margin: 0;
+  }
+}
+
+img {}
+
+blockquote {
+  color: $text-color;
+  font-style: italic;
+  font-family: $georgia;
+  font-size: 18px;
+  line-height: 170%;
+  p {
+    &:before {
+      content: " “ ";
+      color: $grey-light;
+    }
+    &:after {
+      content: " ” ";
+      color: $grey-light;
+    }
+  }
+}
+
+hr {
+  background: $border-color;
+  border: none;
+  height: 1px;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  th {
+    border: 1px solid gray;
+    padding: 0.2em;
+    text-align: left;
+  }
+  td {
+    border: 1px solid gray;
+    padding: 0.2em;
+  }
+}
+
+
+
+

@@ -1,0 +1,70 @@
+/*-----------------------------------------------------------------------------------------------------
+    [variables]
+-------------------------------------------------------------------------------------------------------*/
+
+/* 
+* Color 
+*/
+
+/* Application colors */
+$primary             : #DB4A37;
+$secondary           : #4B4A4D;
+$tertiary            : #99CC00;
+
+$bg-color            : #eae8d6;
+$border-color        : #D3DFE5;
+$selection           : #99e1e5;
+
+/* Typography colors */
+$text-color          : #333333;
+$text-color-light    : #666666;
+$title-color         : #222222;
+
+/* Shades of grey */
+$grey-lighter        : #F5F5F5;
+$grey-light          : #EBEBEB;
+$grey                : #b5b5b5;
+$grey-dark           : #6F6E75;
+$grey-darker         : #242323;
+
+/* Alerts colors */
+$alert               : #F15B41;
+$warning             : #F5CD21;
+$info                : #76C9D2;
+$success             : #39B54A;
+
+
+/* 
+* Typo 
+*/
+$arial           : Arial, sans-serif;
+$georgia         : Georgia, "Times New Roman", serif;
+$montserrat      : 'Montserrat', sans-serif;
+$hammersmith     : 'Hammersmith One', sans-serif; 
+
+$primary-font    : $hammersmith;
+$secondary-font  : $montserrat;
+
+
+/* 
+* Layout 
+*/
+$max-width     : 1400px;
+$base-radius   : 4px;
+$spacing       : 10px;
+$icon-size     : 32px;
+
+/*
+* Animation
+*/
+$timing        : 200ms;
+
+/* 
+* Breackpoint 
+*/
+$xsmall        : 450px; 
+$small         : 768px; 
+$medium        : 960px;
+$large         : 1200px;
+$xlarge        : 1600px;
+

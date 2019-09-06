@@ -1,0 +1,14 @@
+      <article class="block-author">
+        <a class="block-author__img js-author-open" href="#{{ user.id }}">
+          <img src="assets/images/{{ user.avatar }}" alt="Avatar de {{ user.name }}">
+        </a>
+        <div class="block-author__text">
+          <h2 class="block-author__name">{{ user.name }}</h2>
+          <p class="block-author__job">{{ user.job }}</p>
+          <ul class="block-author__link">
+            <li><a href="{{ user.website }}" target="_blank">{{ user.website }}</a></li>
+            <li><a href="mailto:{{ user.email }}">{{ user.email }}</a></li>
+          </ul>
+        </div>
+      </article>
+      <a class="block-author__close js-author-close" href="#">Fermer</a>

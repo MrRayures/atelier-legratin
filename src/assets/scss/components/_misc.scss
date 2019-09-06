@@ -1,0 +1,37 @@
+/*-----------------------------------------------------------------------------------------------------
+    [misc]
+-------------------------------------------------------------------------------------------------------*/
+
+/*
+* IMG responsive
+*/
+.img-responsive {
+	position: relative;
+	&:after {
+  	content: "";
+  	background: url('../img/loader.svg') no-repeat center center;
+  	position: absolute;
+  	top: 50%;
+  	left: 50%;
+		width: 50px;
+		height: 50px;
+		margin-left: -25px;
+		margin-top: -25px;
+		pointer-events: none;
+  }
+  &.image-loaded {
+  	&:after {
+  		display: none;
+  	}
+  }
+  img {
+  	width: 100%;
+  	display: block;
+  	opacity: 0;
+		transition: opacity 200ms;
+		&.lazyloaded {
+			opacity: 1;
+		}
+  }
+}
+

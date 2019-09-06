@@ -1,0 +1,6 @@
+<svg role="img" class="{{svg.class}}" aria-labelledby="icon-{{svg.id}}" focusable="false" aria-hidden="true">
+  {% if svg.title %}
+    <title id="icon-{{svg.id}}" class="u-sr-only">{{svg.title}}</title>
+  {% endif %}
+  <use xlink:href="{{svg.path}}#{{svg.id}}"></use>
+</svg>
