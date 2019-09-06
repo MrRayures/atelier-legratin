@@ -138,7 +138,7 @@ function js_minify() {
 function img() {
   return src([source + '/assets/images/**/*.{png,jpg,jpeg,gif,svg}'], {since: lastRun(img)})
     .pipe(imagemin())
-    .pipe(dest([prod + '/assets/img']));
+    .pipe(dest([prod + '/assets/images/']));
 };
 
 /*
