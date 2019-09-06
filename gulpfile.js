@@ -141,6 +141,18 @@ function img() {
     .pipe(dest([prod + '/assets/images/']));
 };
 
+
+/*
+* Copy task
+* Copy assets
+*/
+function copy_assets() {
+  return src([source + '/apple-touch-icon.png', source + '/favicon.ico'])
+    .pipe(dest([prod]));
+};
+
+
+
 /*
 * Generate responsive IMG
 * Edit size and add as much as you want
@@ -260,12 +272,13 @@ function watch_files() {
 * Define complex tasks
 * !This part is still in WIP
 */
-const build = series(clean, css, css_minify, img, html, js, js_minify);
+const build = series(clean, css, css_minify, img, html, js, js_minify, copy_assets);
 
 /*
 * Public function
 */
 exports.img = series(img);
+exports.copy = copy_assets;
 exports.css = series(css, css_minify);
 exports.js = series(js, js_minify);
 exports.html = html;
@@ -276,14 +289,6 @@ exports.build = build;
 exports.watch = watch_files;
 exports.default = build;
 
-/*module.exports = {
-  default: series(css, js, html, watch),
-  watch: series(clean, watcher),
-  clean: clean,
-  css: series(css, css_minify),
-  js: series(js, js_minify),
-  img: series(img, img_responsive)
-}*/
 
 
 
