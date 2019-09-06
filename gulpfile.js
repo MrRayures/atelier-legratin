@@ -15,6 +15,7 @@ const replace = require('gulp-replace');
 const merge = require('merge-stream');
 const browserSync = require('browser-sync');
 const server = browserSync.create();
+const workboxBuild = require('workbox-build');
 
 //CSS
 const sass = require('gulp-sass');
@@ -43,6 +44,7 @@ const responsive = require('gulp-responsive');
 const svgSprite = require('gulp-svg-sprite');
 const sassInlineSvg = require('gulp-sass-inline-svg');
 const svgmin = require('gulp-svgmin');
+
 
 
 // Path variable
@@ -316,6 +318,17 @@ function serve(done) {
 }
 
 
+function service_worker() {
+  return workboxBuild.generateSW({
+    globDirectory: 'dist',
+    globPatterns: [
+      '**/*.{html,json,js,css,jpg,webp,svg,png}',
+    ],
+    swDest: 'dist/sw.js',
+  });
+};
+
+
 /*
 * WATCH task
 * CSS > compile and minify
@@ -337,7 +350,8 @@ function watch_files() {
 * Define complex tasks
 * !This part is still in WIP
 */
-const build = series(clean, css, css_minify, img, img_webp, html, js, js_vendor, js_minify, copy_assets);
+const build = series(clean, css, css_minify, img, img_webp, html, js, js_vendor, js_minify, copy_assets, service_worker);
+
 
 /*
 * Public function
@@ -351,6 +365,7 @@ exports.js = series(js, js_minify);
 exports.html = html;
 exports.icons = icons;
 exports.icons_css = icons_css;
+exports.sw = service_worker;
 exports.clean = clean;
 exports.build = build;
 exports.watch = parallel(watch_files, serve);

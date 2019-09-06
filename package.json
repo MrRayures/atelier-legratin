@@ -15,10 +15,10 @@
   "devDependencies": {
     "@babel/core": "^7.0.0",
     "babel-preset-env": "latest",
+    "browser-sync": "latest",
     "del": "latest",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "latest",
-    "browser-sync": "latest",
     "gulp-babel": "latest",
     "gulp-concat": "latest",
     "gulp-csso": "latest",
@@ -40,6 +40,7 @@
     "gulp-svg-sprite": "latest",
     "gulp-svgmin": "latest",
     "merge-stream": "^2.0.0",
+    "workbox-build": "^4.3.1",
     "yargs": "^14.0.0"
   },
   "dependencies": {
