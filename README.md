@@ -1,9 +1,11 @@
+# Templates HTML Bonjourlebon
+
 # Installation
-		> You need to have `node`, `npm`, `gulp`, `babel` and `bower` installed locally to run this project.
+		> You need to have `node`, `npm`, `gulp` installed locally to run this project.
 
 # Installation
     npm install
-    bower install
+    gulp build
 
 ## Compilation and watch on all files
 
@@ -11,4 +13,4 @@
 
 ## Production task 
 
-    gulp prod
+    gulp deploy

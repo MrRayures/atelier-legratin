@@ -2,15 +2,6 @@
 	"users":
 	[  
 		{
-			"id"     : "alexandre-clerisse",
-			"name"   : "Alexandre Clérisse",
-			"desc"   : "",
-			"avatar" : "alexandre-clerisse",
-			"job"    : "auteur, illustrateur, graphiste",
-			"email"  : "alexandre.clerisse@gmail.com",
-			"website": "http://alexclerisse.over-blog.com/"
-		},
-		{
 			"id"     : "francois-leproust",
 			"name"   : "François Leproust",
 			"desc"   : "",
@@ -18,15 +9,6 @@
 			"job"    : "webdesigner & developpeur front-end",
 			"email"  : "hello@mr-rayures.com",
 			"website": "https://mr-rayures.com/"
-		},
-		{
-			"id"     : "natacha-sicaud",
-			"name"   : "Natacha Sicaud",
-			"desc"   : "",
-			"avatar" : "natacha-sicaud",
-			"job"    : "auteure, illustratrice",
-			"email"  : "sicaudnatacha@yahoo.fr",
-			"website": "http://natachasicaud.ultra-book.com/portfolio"
 		},
 		{
 			"id"     : "nicolas-glorieux",
@@ -70,26 +52,8 @@
 			"desc"   : "",
 			"avatar" : "laurent-bourlaud",
 			"job"    : "auteur, illustrateur, graphiste",
-			"email"  : "laurentbourlaud.tumblr.com",
+			"email"  : "laurent.bourlaud@gmail.com",
 			"website": "http://laurentbourlaud.tumblr.com/"
-		},
-		{
-			"id"     : "mylene-rigaudie",
-			"name"   : "Mylène Rigaudie",
-			"desc"   : "",
-			"avatar" : "mylene-rigaudie",
-			"job"    : "illustratrice jeunesse",
-			"email"  : "rigaudie.mylene@gmail.com",
-			"website": "http://mylene-rigaudie.ultra-book.com/"
-		},
-		{
-			"id"     : "julie-gore",
-			"name"   : "Julie Gore",
-			"desc"   : "",
-			"avatar" : "julie-gore",
-			"job"    : "auteure, illustratrice",
-			"email"  : "goregraph@gmail.com",
-			"website": "http://www.juliegore.com"
 		},
 		{
 			"id"     : "camille-marine-julie",
