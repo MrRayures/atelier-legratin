@@ -19,7 +19,7 @@
 	
 	<!-- Load CSS -->
 	{% if css_base %}
-		<link rel="stylesheet" type="text/css" href="assets/css/{{ css_base }}.min.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/app.css">
 	{% endif %}
 
 
@@ -28,18 +28,18 @@
 
 <body class="{{ body_class }}">
 	
-	{% include "modules/header.html" %}
+	{% include "templates/modules/header.html" %}
 	<!-- //END Header -->
 
 	{% block page_content %}{% endblock %}
 
-	{% include "modules/footer.html" %}
+	{% include "templates/modules/footer.html" %}
 	<!-- //END Footer -->
 	
 
 	{% if js_base %}
-		<script type="text/javascript" src="assets/js/vendor.min.js"></script>
-		<script type="text/javascript" src="assets/js/app.min.js"></script>
+		<script type="text/javascript" src="assets/js/vendor.js"></script>
+		<script type="text/javascript" src="assets/js/app.js"></script>
 
 		<script>
 		// Check that service workers are supported
