@@ -22,7 +22,7 @@
     "vendor": "mkdirp -p dist/assets/js && mkdirp -p dist/assets/css && concat-glob-cli -f src/assets/js/vendor/*.js -o dist/assets/js/vendor.js && concat-glob-cli -f src/assets/styles/vendor/*.css -o dist/assets/css/vendor.css && uglifyjs dist/assets/js/vendor.js -o dist/assets/js/vendor.min.js",
     "build:css": "npm run scss",
     "build:img": "npm run img",
-    "build:js": "npm run js && npm run js_min",
+    "build:js": "npm run js && npm run js_min && npm run vendor",
     "build:html": "npm run html",
     "watch:css": "onchange src/assets/styles/scss/**/*.scss -- npm run build:css",
     "watch:img": "onchange src/assets/img/**/*.{jpg,jpeg,png,svg} -- npm run build:img",
