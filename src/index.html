@@ -1,5 +1,5 @@
 <!-- index.html -->
-{% extends "layout.html" %}
+{% extends "templates/layout.html" %}
 
 <!-- //START page variables -->
 {% set page_title = "Atelier Le Gratin - Atelier collectif basé à Angoulême" %}
@@ -12,11 +12,10 @@
 <!-- //START page Content -->
 {% block page_content %}
 	
-
 	<ul class="m-list m-list--author">
 		{% for user in users %}
       <li class="m-list__items" id="{{ user.id }}">
-      	{% include "blocks/author.html" %}
+      	{% include "templates/blocks/author.html" %}
       </li>
     {% endfor %}
 	</ul>

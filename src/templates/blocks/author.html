@@ -2,14 +2,14 @@
         <a class="block-author__img js-author-open" href="#{{ user.id }}">
           <picture class="img-responsive">
              <source
-              srcset="assets/images/author/placeholder.jpg"
-              data-srcset="assets/images/author/{{ user.avatar }}.webp" 
+              srcset="{{img_path}}/author/placeholder.jpg"
+              data-srcset="{{img_path}}/author/{{ user.avatar }}.webp" 
               type="image/webp">
               <source
-              srcset="assets/images/author/placeholder.jpg"
-              data-srcset="assets/images/author/{{ user.avatar }}.jpg" 
+              srcset="{{img_path}}/author/placeholder.jpg"
+              data-srcset="{{img_path}}/author/{{ user.avatar }}.jpg" 
               type="image/jpg">
-              <img class="lazyload" src="assets/images/author/placeholder.jpg" data-src="assets/images/author/{{ user.avatar }}.jpg" alt="Avatar de {{ user.name }}">
+              <img class="lazyload" src="{{img_path}}/author/placeholder.jpg" data-src="{{img_path}}/author/{{ user.avatar }}.jpg" alt="Avatar de {{ user.name }}">
           </picture>
         </a>
         <div class="block-author__text">
