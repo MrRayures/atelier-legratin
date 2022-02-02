@@ -1,5 +1,5 @@
-import sass from 'sass';
-import fs from 'fs';
+var sass = require('sass');
+var fs = require('fs');
 
 // Configs
 var configs = {

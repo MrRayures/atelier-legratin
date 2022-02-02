@@ -15,7 +15,7 @@
   "scripts": {
     "clean": "recursive-delete dist",
     "copy": "mkdirp -p dist/assets && recursive-copy src/assets/icons dist/assets/icons && recursive-copy src/assets/fonts dist/assets/fonts",
-    "scss": "node sass.config.js",
+    "scss": "node sass.config.cjs",
     "img": "mkdirp -p dist/assets/images && recursive-copy src/assets/images dist/assets/images",
     "html": "nunjucks-to-html src/*.{njk,html} --config nunjucks.config.cjs --dest dist/ --flatten true",
     "js": "mkdirp -p dist/assets/js && concat-glob-cli -f src/assets/js/*.js -o dist/assets/js/app.js",
