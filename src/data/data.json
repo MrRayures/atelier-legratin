@@ -100,6 +100,16 @@
 			"job"    : "",
 			"email"  : "",
 			"website": ""
+		},
+    {
+			"id"   : "helene-canac",
+			"name"   : "Helene Canac",
+			"desc"   : "",
+			"avatar" : "placeholder",
+			"job"    : "",
+			"email"  : "",
+			"website": ""
 		}
 	]
 }  
+
