@@ -14,11 +14,22 @@
         </a>
         <div class="block-author__text">
           <h2 class="block-author__name">{{ user.name }}</h2>
-          <p class="block-author__job">{{ user.job }}</p>
-          <ul class="block-author__link">
-            <li><a href="{{ user.website }}" target="_blank">{{ user.website }}</a></li>
-            <li><a href="mailto:{{ user.email }}">{{ user.email }}</a></li>
-          </ul>
+          {% if user.job %}
+            <p class="block-author__job">{{ user.job }}</p>
+          {% endif %}
+          {% if user.email %}
+            <ul class="block-author__link">
+              {% if user.insta %}
+                <li><a href="{{ user.website }}" target="_blank">{{ user.website }}</a></li>
+              {% endif %}
+              {% if user.insta %}
+                <li><a href="{{ user.insta }}">{{ user.insta }}</a></li>
+              {% endif %}
+              {% if user.email %}
+                <li><a href="mailto:{{ user.email }}">{{ user.email }}</a></li>
+              {% endif %}
+            </ul>
+          {% endif %}
         </div>
       </article>
       <a class="block-author__close js-author-close" href="#">Fermer</a>

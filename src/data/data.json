@@ -47,22 +47,59 @@
 			"website": "http://laurentbourlaud.tumblr.com/"
 		},
 		{
-			"id"     : "camille-marine-julie",
-			"name"   : "Camille Marine Julie",
-			"desc"   : "",
-			"avatar" : "camille-marine-julie",
-			"job"    : "réalisatrice de documentaire",
-			"email"  : "camillemarinejulie@gmail.com",
-			"website": "http://camillemarinejulie.com/"
-		},
-		{
 			"id"   : "miss-paty",
-			"name"   : "Miss Paty",
+			"name"   : "MissPATY",
 			"desc"   : "",
 			"avatar" : "miss-paty",
-			"job"    : "auteure de BD, illustratrice",
+			"job"    : "autrice-illustratrice",
 			"email"  : "little.misspaty@gmail.com",
-			"website": "http://little-misspaty.blogspot.fr/"
+			"website": "https://misspaty.com/",
+      "insta"  : "https://www.instagram.com/misspaty/"
+		},
+    {
+			"id"   : "giorgia-marras",
+			"name"   : "Giorgia Marras",
+			"desc"   : "",
+			"avatar" : "placeholder",
+			"job"    : "",
+			"email"  : "",
+			"website": ""
+		},
+    {
+			"id"   : "giorgia-casetti",
+			"name"   : "Giorgia Casetti",
+			"desc"   : "",
+			"avatar" : "placeholder",
+			"job"    : "",
+			"email"  : "",
+			"website": ""
+		},
+    {
+			"id"   : "séverine-fraud",
+			"name"   : "Séverine Fraud",
+			"desc"   : "",
+			"avatar" : "placeholder",
+			"job"    : "",
+			"email"  : "",
+			"website": ""
+		},
+    {
+			"id"   : "benoit-hamet",
+			"name"   : "Benoît Hamet",
+			"desc"   : "",
+			"avatar" : "placeholder",
+			"job"    : "",
+			"email"  : "",
+			"website": ""
+		},
+    {
+			"id"   : "line-pauvert",
+			"name"   : "Line Pauvert",
+			"desc"   : "",
+			"avatar" : "placeholder",
+			"job"    : "",
+			"email"  : "",
+			"website": ""
 		}
 	]
 }  
