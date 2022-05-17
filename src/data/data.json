@@ -60,18 +60,18 @@
 			"id"   : "giorgia-marras",
 			"name"   : "Giorgia Marras",
 			"desc"   : "",
-			"avatar" : "placeholder",
-			"job"    : "",
-			"email"  : "",
-			"website": ""
+			"avatar" : "giorgia-marras",
+			"job"    : "autrice de bande-dessinée, illustratrice",
+			"email"  : "giorgiet.marras@gmail.com",
+			"website": "https://www.giorgiamarras.com"
 		},
     {
 			"id"   : "giorgia-casetti",
 			"name"   : "Giorgia Casetti",
 			"desc"   : "",
-			"avatar" : "placeholder",
-			"job"    : "",
-			"email"  : "",
+			"avatar" : "giorgia-casetti",
+			"job"    : "autrice - illustratrice - character design",
+			"email"  : "giorgia.casetti@gmail.com",
 			"website": ""
 		},
     {
@@ -86,11 +86,12 @@
     {
 			"id"   : "benoit-hamet",
 			"name"   : "Benoît Hamet",
-			"desc"   : "",
-			"avatar" : "placeholder",
-			"job"    : "",
-			"email"  : "",
-			"website": ""
+			"desc"   : "Benoît Hamet est un auteur illustrateur, né en 1984 en région parisienne, il a étudié la bande dessinée à l’École Supérieure des Beaux-Arts d’Angoulême et un temps à l’Académie des Beaux-Arts de Bologne en Italie. Il partit ensuite vivre pendant six ans à Istanbul en Turquie, travaillant avec plusieurs institutions et revues culturelles locales (Penguen, Karakarga, OT Dergi). Il est depuis la fin de l’année 2021 revenu vivre à Angoulême et collabore avec plusieurs publications (L'Actualité Nouvelle Aquitaine, XXI, Oblik, Alternatives Economiques, CitizenK).",
+			"avatar" : "benoit-hamet",
+			"job"    : "auteur illustrateur,",
+			"email"  : "hamet.benua@gmail.com",
+			"website": "https://www.behance.net/benoithamet",
+			"insta"  : "https://www.instagram.com/benoithamet/"
 		},
     {
 			"id"   : "line-pauvert",
