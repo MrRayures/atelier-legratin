@@ -34,7 +34,7 @@
     "watch": "npm-run-all --parallel serve watch:*"
   },
   "devDependencies": {
-    "browser-sync": "^2.27.7",
+    "browser-sync": "^2.27.10",
     "chokidar": "^3.5.3",
     "chokidar-cli": "^3.0.0",
     "concat-glob-cli": "^0.1.0",
