@@ -8,16 +8,8 @@
 			"avatar" : "francois-leproust",
 			"job"    : "webdesigner & developpeur front-end",
 			"email"  : "hello@mr-rayures.com",
-			"website": "https://mr-rayures.com/"
-		},
-		{
-			"id"     : "nicolas-glorieux",
-			"name"   : "Nicolas Glorieux",
-			"desc"   : "",
-			"avatar" : "nicolas-glorieux",
-			"job"    : "réalisateur de documentaire",
-			"email"  : "nicolas.t.glorieux@gmail.com",
-			"website": "http://nicolasglorieux.wix.com/video"
+			"website": "https://mr-rayures.com/",
+      "insta"  : ""
 		},
 		{
 			"id"     : "olivier-thomas",
@@ -26,7 +18,8 @@
 			"avatar" : "olivier-thomas",
 			"job"    : "dessinateur BD",
 			"email"  : "olivezthomas@gmail.com",
-			"website": "https://www.instagram.com/olivier29thomas/"
+			"website": "https://www.instagram.com/olivier29thomas/",
+      "insta"  : ""
 		},
 		{
 			"id"     : "angele-villeneuve",
@@ -35,7 +28,17 @@
 			"avatar" : "angele-villeneuve",
 			"job"    : "Dessinatrice : illustrations et créations graphiques",
 			"email"  : "angele.newtown@gmail.com",
-			"website": "https://angelevilleneuve.wixsite.com/angelevilleneuve"
+			"website": "https://angelevilleneuve.wixsite.com/angelevilleneuve",
+      "insta"  : ""
+		},
+    {
+			"id"     : "el-rene",
+			"name"   : "El René",
+			"desc"   : "",
+			"avatar" : "el-rene",
+			"job"    : "Artiste-auteur",
+			"website": "https://www.art-confidential.co/catalogue/shop-elrene/",
+			"insta"  : "https://www.instagram.com/ave.el.rene/"
 		},
 		{
 			"id"     : "laurent-bourlaud",
@@ -44,7 +47,8 @@
 			"avatar" : "laurent-bourlaud",
 			"job"    : "auteur, illustrateur, graphiste",
 			"email"  : "laurent.bourlaud@gmail.com",
-			"website": "http://laurentbourlaud.tumblr.com/"
+			"website": "http://laurentbourlaud.tumblr.com/",
+      "insta"  : ""
 		},
 		{
 			"id"   : "miss-paty",
@@ -63,7 +67,8 @@
 			"avatar" : "giorgia-marras",
 			"job"    : "autrice de bande-dessinée, illustratrice",
 			"email"  : "giorgiet.marras@gmail.com",
-			"website": "https://www.giorgiamarras.com"
+			"website": "https://www.giorgiamarras.com",
+      "insta"  : ""
 		},
     {
 			"id"   : "giorgia-casetti",
@@ -72,44 +77,57 @@
 			"avatar" : "giorgia-casetti",
 			"job"    : "autrice - illustratrice - character design",
 			"email"  : "giorgia.casetti@gmail.com",
-			"website": ""
-		},
-    {
-			"id"   : "séverine-fraud",
-			"name"   : "Séverine Fraud",
-			"desc"   : "",
-			"avatar" : "placeholder",
-			"job"    : "",
-			"email"  : "",
-			"website": ""
+			"website": "",
+      "insta"  : ""
 		},
     {
 			"id"   : "benoit-hamet",
 			"name"   : "Benoît Hamet",
 			"desc"   : "Benoît Hamet est un auteur illustrateur, né en 1984 en région parisienne, il a étudié la bande dessinée à l’École Supérieure des Beaux-Arts d’Angoulême et un temps à l’Académie des Beaux-Arts de Bologne en Italie. Il partit ensuite vivre pendant six ans à Istanbul en Turquie, travaillant avec plusieurs institutions et revues culturelles locales (Penguen, Karakarga, OT Dergi). Il est depuis la fin de l’année 2021 revenu vivre à Angoulême et collabore avec plusieurs publications (L'Actualité Nouvelle Aquitaine, XXI, Oblik, Alternatives Economiques, CitizenK).",
 			"avatar" : "benoit-hamet",
-			"job"    : "auteur illustrateur,",
+			"job"    : "auteur illustrateur",
 			"email"  : "hamet.benua@gmail.com",
 			"website": "https://www.behance.net/benoithamet",
 			"insta"  : "https://www.instagram.com/benoithamet/"
 		},
     {
-			"id"   : "line-pauvert",
-			"name"   : "Line Pauvert",
-			"desc"   : "",
-			"avatar" : "placeholder",
-			"job"    : "",
-			"email"  : "",
-			"website": ""
-		},
-    {
 			"id"   : "helene-canac",
 			"name"   : "Helene Canac",
 			"desc"   : "",
-			"avatar" : "placeholder",
-			"job"    : "",
+			"avatar" : "helene-canac",
+			"job"    : "Illustration jeunesse & Bandes Dessinées",
 			"email"  : "",
-			"website": ""
+			"website": "https://ln-illustrations.ultra-book.com/",
+      "insta"  : "https://www.instagram.com/poulpychoups/"
+		},
+    {
+			"id"   : "lassus-oriane",
+			"name"   : "Oriane Lassus",
+			"desc"   : "",
+			"avatar" : "lassus-oriane",
+			"job"    : "Autrice de bande dessinée",
+			"email"  : "oriane@spongiculture.net",
+			"website": "http://spongiculture.net/",
+      "insta"  : ""
+		},
+    {
+			"id"   : "moein-amir",
+			"name"   : "MOEIN Amir",
+			"desc"   : "",
+			"avatar" : "moein-amir",
+			"job"    : "Réalisateur de film d'animation",
+			"email"  : "amir.houshang.moein@gmail.com",
+			"website": "https://www.linkedin.com/in/amir-moein-b222186b/",
+      "insta"  : "https://www.instagram.com/amir_houshang_moein/"
+		},
+    { 
+			"id"     : "natacha-sicaud", 
+			"name"   : "Natacha Sicaud", 
+			"desc"   : "", 
+			"avatar" : "natacha-sicaud", 
+			"job"    : "auteure, illustratrice", 
+			"email"  : "sicaudnatacha@yahoo.fr", 
+			"website": "http://natachasicaud.ultra-book.com/portfolio" 
 		}
 	]
 }  

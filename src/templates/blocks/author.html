@@ -17,9 +17,9 @@
           {% if user.job %}
             <p class="block-author__job">{{ user.job }}</p>
           {% endif %}
-          {% if user.email %}
+          {% if user.email or user.website or user.insta %}
             <ul class="block-author__link">
-              {% if user.insta %}
+              {% if user.website %}
                 <li><a href="{{ user.website }}" target="_blank">{{ user.website }}</a></li>
               {% endif %}
               {% if user.insta %}
